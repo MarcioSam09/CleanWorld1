@@ -18,7 +18,7 @@ async function getAllFreteiro(){
     MODELOCARRO
     from freteiro
     INNER JOIN USUARIO
-    ON FRETEIRO.ID= USUARIO.ID`);
+    ON FRETEIRO.id_usuario = USUARIO.id`);
 
     await connection.end();
 

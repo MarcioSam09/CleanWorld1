@@ -14,7 +14,7 @@ async function createTableFreteiro(){
             nomeCarro VARCHAR(255) NOT NULL,
             modeloCarro VARCHAR(255) NOT NULL,
             placaCarro VARCHAR(255) NOT NULL,
-            id_usuario INT ,
+            id_usuario INT,
             FOREIGN KEY (id_usuario) REFERENCES usuario(id)
         )`);
 

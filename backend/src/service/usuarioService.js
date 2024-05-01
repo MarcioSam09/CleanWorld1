@@ -29,7 +29,7 @@ async function updateUsuario(id,nome,cpf,endereco,telefone,email,tipoCadastro){
     
     const updateUsuario = "UPDATE usuario SET nome = ?, cpf = ?, endereco = ?, telefone = ?, email = ? , tipoCadastro = ? where id = ?" ;
     
-    await connection.query(updateUsuario[id, nome,cpf,endereco,telefone,email,tipoCadastro]);
+    await connection.query(updateUsuario,[id, nome,cpf,endereco,telefone,email,tipoCadastro])
     
     await connection.end();
 

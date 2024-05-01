@@ -6,7 +6,7 @@ async function getAllFreteiro(req, res){
         res.status(200).json(rows);
     }catch(error){
         res.status(500).send({
-            message: "Error getting freteiro!",
+            message: "Error getting freteiros!",
             body: error.message,
         });
     }
@@ -16,9 +16,8 @@ async function createFreteiro(req, res){
     const {distancia, tipoColeta, peso, nomeCarro, modeloCarro, placaCarro, id_usuario} = req.body;
     try{
         await freteiroService.createFreteiro(distancia, tipoColeta, peso, nomeCarro, modeloCarro, placaCarro, id_usuario);
-        res.status(201).json({
-            message: "Sucess"
-        });
+
+        res.status(201).json({message: "Sucess"});
     }catch(error){
         res.status(500).send({
             message: "Error adding freteiro!",
